@@ -1,0 +1,272 @@
+body {
+    font-family: Microsoft JhengHei;
+}
+body, ul, li {
+    margin: 0;
+    padding: 0;
+}
+/* header */
+header {
+    width: 80%;
+    margin: 0 auto;
+}
+#h_top {
+    position: fixed;
+    background-color: #fff;
+    box-shadow:  3px 3px 3px rgb(238, 238, 238);
+    width: 100%;
+    height: 90px;
+    margin: 0 auto;
+    z-index: 99;
+    display: none;
+}
+#h_top2 {
+    display: none;
+}
+#headtop {
+    width: 80%;
+    height: 90px;
+    margin: 0 auto;
+    position: relative;
+}
+#headtop img {
+    position: absolute;
+    top: 0;
+    left: 3%;
+}
+/* 搜尋 */
+.search_input {
+    width: 200px;
+    height: 35px;
+    outline: none;
+    padding-left: 15px;
+    border: none;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    background: rgb(235, 235, 235);
+    font-size: 14px;
+    position: absolute;
+    top: 30%;
+    right: 180px;
+}
+.search_btn {
+    width: 35px;
+    height: 35px;
+    border: none;
+    outline: none;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background: url(../image/search_btn.png) no-repeat center;
+    position: absolute;
+    top: 30%;
+    right: 145px;
+    cursor: pointer;
+}
+/* 登入.臉書.語言 */
+#btn_box {
+    position: absolute;
+    top: 30%;
+    right: 0;
+}
+#btn_box ul {
+    width: 135px;
+    height: 35px;
+    list-style: none;
+    padding: 0;
+}
+#btn_box ul li {
+    width: 45px;
+    height: 35px;
+    line-height: 35px;
+    float: left;
+    text-align: center;
+}
+#btn_box ul li a {
+    display: block;
+    width: 45px;
+    height: 35px;
+    line-height: 35px;
+    text-decoration: none;
+    /* background: url(../image/login.png) no-repeat center; */
+}
+#btn_box ul li a.login {
+    background: url(../image/login.png) no-repeat center;
+}
+#btn_box ul li a.fb {
+    background: url(../image/fb.png) no-repeat center;
+}
+#btn_box ul li a.language {
+    background: url(../image/language.png) no-repeat center;
+}
+#btn_box ul li a.login:hover {
+    background: url(../image/login2.png) no-repeat center;
+}
+#btn_box ul li a.fb:hover {
+    background: url(../image/fb2.png) no-repeat center;
+}
+#btn_box ul li a.language:hover {
+    background: url(../image/language2.png) no-repeat center;
+}
+/* 側邊彈出菜單 */
+.burger {
+    width: 40px;
+    height: 40px;
+    border: none;
+    background: url(../image/burger.png) no-repeat;
+    position: relative;
+    top: -35px;
+    left: 140px;
+}
+.accordion-button2 {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 1.25rem;
+    font-size: 1rem;
+    color: #212529;
+    text-align: left;
+    background-color: #fff;
+    border: 0;
+    border-radius: 0;
+    overflow-anchor: none;
+    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,border-radius .15s ease;
+}
+.accordion-button2:hover {
+    background-color: rgb(235, 235, 235);
+}
+.accordion-header a {
+    text-decoration: none;
+}
+.accordion-body ul {
+    padding-left: 0;
+    
+}
+.accordion-body ul li {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    list-style: none;
+    text-indent: 10%;
+}
+.accordion-body ul li a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+}
+.accordion-body ul li a:hover {
+    background-color: rgb(235, 235, 235);
+}
+
+.loginbox {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+}
+.loginbox a {
+    text-decoration: none;
+    color: #999 ;
+}
+.loginbox a:hover {
+    color: #66B3FF;
+}
+
+
+@media screen and (max-width:1800px) { 
+    #h_top {
+        display: flex;
+    }
+    #h_top2 {
+        display: block;
+    }
+}
+@media screen and (max-width:1100px) {
+    header {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:800px) { 
+    #headtop img {
+        left: 2%;
+    }
+    #headtop {
+        width: 100%;
+        height: 90px;
+        margin: 0 auto;
+        position: relative;
+    }
+    .search_input {
+        right: 255px;
+    }
+    .search_btn {
+        right: 220px;
+    }
+    #btn_box {
+        right: 70px;
+    }
+
+}
+@media screen and (max-width:728px) {
+    #btn_box .fb, #btn_box .language {
+        display: none;
+    }
+    .search_input,.search_btn,#btn_box .fb,#btn_box.language {
+        display: none;
+    }
+    #btn_box .burger {
+        display: block;
+    }
+}
+@media screen and (max-width:600px) {
+    #headtop,#h_top {
+        height: 72px;
+    }
+    #headtop img {
+        width: 184px;
+        height: 72px;
+    }
+}
+@media screen and (max-width:414px) {
+    #h_top {
+        width: 414px;
+    }
+    #headtop,#h_top {
+        height: 54px;
+    }
+    #headtop img {
+        width: 138px;
+        height: 54px;
+    }
+    #headtop #btn_box {
+        height: 54px;
+        top: 17%;
+        right: 50px;
+    }
+    #h_top #btn_box {
+        right: 50px;
+    }
+}
+@media screen and (max-width:411px) {
+    #h_top {
+        width: 411px;
+    }
+    #h_top #btn_box {
+        right: 50px;
+    }
+}
+@media screen and (max-width:375px) {
+    #h_top {
+        width: 375px;
+    }
+}
+@media screen and (max-width:360px) {
+    #h_top {
+        width: 360px;
+    }
+}
+@media screen and (max-width:320px) {
+    #h_top {
+        width: 320px;
+    }
+}
